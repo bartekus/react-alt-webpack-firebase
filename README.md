@@ -34,6 +34,7 @@ Checkout this repo, install dependencies, then start the server with the followi
 
 ## History
 
+* 0.0.3 Added firebase backed
 * 0.0.2 Added Material-UI, MessageBox, MessageList/Message and ChannelList/Channel
 * 0.0.1 First commit - Webpack, Hot reloading, SCSS and ES6/7 pipelines configured
 
