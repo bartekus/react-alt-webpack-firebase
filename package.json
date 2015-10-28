@@ -1,0 +1,40 @@
+{
+  "name": "hackscape",
+  "version": "0.0.1",
+  "description": "Hackscape - Real-Time, Universal App build using React, Flux, Webpack & Firebase ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Bartekus/hackscape.git"
+  },
+  "keywords": [
+    "hacking",
+    "online",
+    "social",
+    "game",
+    "network",
+    "simulator",
+    "virtual",
+    "empire"
+  ],
+  "author": "Bartek Kus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bartekus/hackscape/issues"
+  },
+  "homepage": "https://github.com/Bartekus/hackscape#readme",
+  "dependencies": {
+    "babel-core": "^5.8.30",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.21.0",
+    "node-sass": "^3.4.1",
+    "react": "^0.14.0",
+    "react-hot-loader": "^1.3.0",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2"
+  }
+}
