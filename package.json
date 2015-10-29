@@ -1,11 +1,10 @@
 {
   "name": "hackscape",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "HackScape.io - Real-Time, Universal React, Flux, Webpack & Firebase App",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --progress --inline --colors",
-    "build": "webpack --config webpack.config.js --progress --colors"
+    "start": "node server"
   },
   "repository": {
     "type": "git",
@@ -37,11 +36,15 @@
     "material-ui": "^0.10.2",
     "node-sass": "^3.2.0",
     "react": "^0.13.3",
-    "react-hot-loader": "^1.2.8",
+    "react-router": "^0.13.3",
     "react-tap-event-plugin": "^0.1.7",
     "sass-loader": "^1.0.3",
     "style-loader": "^0.12.3",
     "trim": "0.0.1",
     "webpack": "^1.10.5"
+  },
+  "devDependencies": {
+    "react-hot-loader": "^1.2.8",
+    "webpack-dev-server": "^1.12.1"
   }
 }

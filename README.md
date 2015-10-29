@@ -34,6 +34,7 @@ Checkout this repo, install dependencies, then start the server with the followi
 
 ## History
 
+* 0.1.0 Implemented React-Router /Refactoring & cleanup
 * 0.0.4 Added Alt & converted to flax architecture /Implemented firebase Oauth & persistent data
 * 0.0.3 Added firebase backed
 * 0.0.2 Added Material-UI, MessageBox, MessageList/Message and ChannelList/Channel

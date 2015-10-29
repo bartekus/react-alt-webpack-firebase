@@ -8,27 +8,12 @@ import _ from 'lodash';
 @datasource(ChannelSource, MessageSource)
 @decorate(alt)
 class ChatStore {
-  constructor(){
-    this.state = {
-	    user: null,
-	    messages: null,
-	    messagesLoading: true
-    };
-  }
-
-	@bind(Actions.messagesReceived)
-	receivedMessages(messages){
-		_(messages)
-		.keys()
-		.each((k)=> {
-				messages[k].key = k;
-			})
-		.value();
-
-		this.setState({
-			messages,
-			messagesLoading: false
-		});
+	constructor(){
+		this.state = {
+			user: null,
+			messages: null,
+			messagesLoading: true
+		};
 	}
 
 	@bind(Actions.messagesLoading)
@@ -37,6 +22,22 @@ class ChatStore {
 			messagesLoading: true
 		});
 	}
+
+	@bind(Actions.messagesReceived)
+	receivedMessages(messages){
+		_(messages)
+			.keys()
+			.each((k)=> {
+				messages[k].key = k;
+			})
+			.value();
+
+		this.setState({
+			messages,
+			messagesLoading: false
+		});
+	}
+
 
 	@bind(Actions.sendMessage)
 	sendMessage(message){
@@ -60,48 +61,49 @@ class ChatStore {
 	@bind(Actions.channelOpened)
 	channelOpened(selectedChannel){
 		_(this.state.channels)
-		.values()
-		.each((channel)=> {
+			.values()
+			.each((channel)=> {
 				channel.selected = false;
 			})
-		.value();
+			.value();
 
 		selectedChannel.selected = true;
 
 		this.setState({
 			selectedChannel,
-			channels: this.state.channels
+			channels: this.state.channels,
+			messagesDirty: true
 		});
 
-		// lol shiieeettttt!
 		setTimeout(this.getInstance().getMessages, 100);
 	}
 
 	@bind(Actions.channelsReceived)
-	receiverChannels(channels){
+	receivedChannels(channels){
 		let selectedChannel;
 		_(channels)
-		.keys()
-		.each((key, index) => {
+			.keys()
+			.each((key, index) => {
 				channels[key].key = key;
-				if(index == 0){
-					channels[key].selected = true;
+				if(channels[key].selected){
 					selectedChannel = channels[key];
 				}
 			})
-		.value();
+			.value();
 
 		this.setState({
 			channels,
-			selectedChannel
+			selectedChannel,
+			messagesDirty: true
 		});
 
 		setTimeout(this.getInstance().getMessages, 100);
 	}
 
-  @bind(Actions.login)
-  login(user){
-    this.setState({user: user});
-  }
+	@bind(Actions.login)
+	login(user){
+		this.setState({user: user});
+	}
 }
+
 export default alt.createStore(ChatStore);

@@ -8,60 +8,71 @@ var {Card, List, CircularProgress} = mui;
 
 @connectToStores
 class ChannelList extends React.Component {
-  constructor(props){
-    super(props);
-    ChatStore.getChannels();
-  }
+	constructor(props){
+		super(props);
+	}
 
-  static getStores(){
-    return [ChatStore];
-  }
+	componentDidMount(){
+		this.selectedChannel = this.props.params.channel;
+		ChatStore.getChannels(this.selectedChannel);
+	}
 
-  static getPropsFromStores(){
-    return ChatStore.getState();
-  }
+	componentWillReceiveProps(nextProps){
+		if(this.selectedChannel != nextProps.params.channel){
+			this.selectedChannel = nextProps.params.channel;
+			ChatStore.getChannels(this.selectedChannel);
+		}
+	}
 
-  render(){
-    if(!this.props.channels){
-      return (
-        <Card style={{
+	static getStores(){
+		return [ChatStore];
+	}
+
+	static getPropsFromStores(){
+		return ChatStore.getState();
+	}
+
+	render(){
+		if(!this.props.channels){
+			return (
+				<Card style={{
           flexGrow: 1
         }}>
-          <CircularProgress
-            mode="indeterminate"
-            style={{
+					<CircularProgress
+						mode="indeterminate"
+						style={{
               paddingTop: '20px',
               paddingBottom: '20px',
               margin: '0 auto',
               display: 'block',
               width: '60px'
             }}
-          />
-        </Card>
-      );
-    }
+						/>
+				</Card>
+			);
+		}
 
 
-    var channelNodes = _(this.props.channels)
-      .keys()
-      .map((k)=> {
-        let channel = this.props.channels[k];
-        return (
-          <Channel channel={channel} />
-        );
-      })
-      .value();
+		var channelNodes = _(this.props.channels)
+			.keys()
+			.map((k)=> {
+				let channel = this.props.channels[k];
+				return (
+					<Channel channel={channel} />
+				);
+			})
+			.value();
 
-    return (
-      <Card style={{
+		return (
+			<Card style={{
         flexGrow: 1
       }}>
-        <List>
-          {channelNodes}
-        </List>
-      </Card>
-    );
-  }
+				<List>
+					{channelNodes}
+				</List>
+			</Card>
+		);
+	}
 }
 
 export default ChannelList;
