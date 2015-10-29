@@ -1,7 +1,7 @@
 {
   "name": "hackscape",
-  "version": "0.0.2",
-  "description": "Hackscape - Real-Time, Universal App build using React, Flux, Webpack & Firebase ",
+  "version": "0.0.4",
+  "description": "HackScape.io - Real-Time, Universal React, Flux, Webpack & Firebase App",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --progress --inline --colors",
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/Bartekus/hackscape#readme",
   "dependencies": {
+    "alt": "^0.17.1",
     "babel-core": "^5.8.14",
     "babel-loader": "^5.3.2",
     "css-loader": "^0.15.6",

@@ -1,7 +1,7 @@
 import React from 'react';
 import mui from 'material-ui';
 import trim from 'trim';
-import Firebase from 'firebase';
+import Actions from '../actions';
 
 var {Card} = mui;
 
@@ -11,21 +11,19 @@ class MessageBox extends React.Component {
     this.state = {
       message: ''
     }
-
-    this.firebaseRef = new Firebase('https://hackscape.firebaseio.com/messages');
   }
+
   onChange(evt){
     this.setState({
       message: evt.target.value
     });
   }
+
   onKeyUp(evt){
     if(evt.keyCode === 13 && trim(evt.target.value) != ''){
       evt.preventDefault();
 
-      this.firebaseRef.push({
-        message: this.state.message
-      });
+      Actions.sendMessage(this.state.message);
 
       this.setState({
         message: ''
@@ -33,6 +31,7 @@ class MessageBox extends React.Component {
 
     }
   }
+
   render(){
     return (
       <Card style={{
@@ -53,7 +52,7 @@ class MessageBox extends React.Component {
             color: '#555',
             fontSize: 14,
             outline: 'auto 0px'
-        }} />
+          }} />
       </Card>
     );
   }

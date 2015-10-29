@@ -1,0 +1,74 @@
+{
+  "messages": {
+    "firebase": {
+      "fb_first": {
+          "message": "First message in firebase",
+          "date": "Wed, 28 Oct 2015 18:14:27 GMT",
+          "author": "Bartek Kus",
+          "profilePic": "http://www.gravatar.com/avatar/47d27ff6fd755687d47100a9eeff73f0?s=48&d=identicon"
+      },
+      "fb_second": {
+          "message": "Second message in firebase",
+          "date": "Wed, 28 Oct 2015 18:14:32 GMT",
+          "author": "Bartek Kus",
+          "profilePic": "http://www.gravatar.com/avatar/47d27ff6fd755687d47100a9eeff73f0?s=48&d=identicon"
+      }
+    },
+    "flux": {
+      "flux_first": {
+          "message": "First message in flux",
+          "date": "Wed, 28 Oct 2015 18:14:27 GMT",
+          "author": "Bartek Kus",
+          "profilePic": "http://www.gravatar.com/avatar/47d27ff6fd755687d47100a9eeff73f0?s=48&d=identicon"
+      },
+      "flux_second": {
+          "message": "Second message in flux",
+          "date": "Wed, 28 Oct 2015 18:14:32 GMT",
+          "author": "Bartek Kus",
+          "profilePic": "http://www.gravatar.com/avatar/47d27ff6fd755687d47100a9eeff73f0?s=48&d=identicon"
+      }
+    },
+    "react": {
+      "react_first": {
+          "message": "First message in react",
+          "date": "Wed, 28 Oct 2015 18:14:27 GMT",
+          "author": "Bartek Kus",
+          "profilePic": "http://www.gravatar.com/avatar/47d27ff6fd755687d47100a9eeff73f0?s=48&d=identicon"
+      },
+      "react_second": {
+          "message": "Second message in react",
+          "date": "Wed, 28 Oct 2015 18:14:32 GMT",
+          "author": "Bartek Kus",
+          "profilePic": "http://www.gravatar.com/avatar/47d27ff6fd755687d47100a9eeff73f0?s=48&d=identicon"
+      }
+    },
+    "webpack": {
+      "wp_first": {
+          "message": "First message in webpack",
+          "date": "Wed, 28 Oct 2015 18:14:27 GMT",
+          "author": "Bartek Kus",
+          "profilePic": "http://www.gravatar.com/avatar/47d27ff6fd755687d47100a9eeff73f0?s=48&d=identicon"
+      },
+      "wp_second": {
+          "message": "Second message in webpack",
+          "date": "Wed, 28 Oct 2015 18:14:32 GMT",
+          "author": "Bartek Kus",
+          "profilePic": "http://www.gravatar.com/avatar/47d27ff6fd755687d47100a9eeff73f0?s=48&d=identicon"
+      }
+    }
+  },
+  "channels": {
+    "flux": {
+      "name": "flux"
+    },
+    "react": {
+      "name": "react"
+    },
+    "firebase": {
+      "name": "firebase"
+    },
+    "webpack": {
+      "name": "webpack"
+    }
+  }
+}
