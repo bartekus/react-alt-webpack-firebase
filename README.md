@@ -1,16 +1,16 @@
-Hackscape
-=========
+React-alt-webpack-firebase
+==========================
 
 ## Synopsis
-Real-Time, Universal App build using React, Flux, Webpack & Firebase
+Real-Time, Universal App build using React, Alt (Flux), Webpack & Firebase
 
 
 ## Motivation
-Game where real geographical locations meet virtual environments
+Just learning to utilize Alt and adding some firebase to the mix
 
 
 ## Screenshot
-![Screenshot software](https://raw.githubusercontent.com/Bartekus/hackscape/master/hackscape.png "screenshot software")
+![Screenshot software](https://raw.githubusercontent.com/Bartekus/react-alt-webpack-firebase/master/react-alt-webpack-firebase.png "screenshot software")
 
 
 ## Installation
@@ -34,6 +34,7 @@ Checkout this repo, install dependencies, then start the server with the followi
 
 ## History
 
+* 0.1.1 Fixed small webpack problem and made few general adjustments
 * 0.1.0 Implemented React-Router /Refactoring & cleanup
 * 0.0.4 Added Alt & converted to flax architecture /Implemented firebase Oauth & persistent data
 * 0.0.3 Added firebase backed

@@ -1,7 +1,7 @@
 {
-  "name": "hackscape",
+  "name": "react-alt-webpack-firebase",
   "version": "0.1.0",
-  "description": "HackScape.io - Real-Time, Universal React, Flux, Webpack & Firebase App",
+  "description": "Real-Time, Universal React, Flux, Webpack & Firebase App",
   "main": "index.js",
   "scripts": {
     "start": "node server"

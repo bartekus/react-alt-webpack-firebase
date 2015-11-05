@@ -35,7 +35,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <AppBar title="hackScape.io" />
+        <AppBar title="react-alt-webpack-firebase" />
         <RouteHandler />
       </div>
     );
